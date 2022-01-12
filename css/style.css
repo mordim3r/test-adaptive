@@ -1,0 +1,76 @@
+/*обнуление*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #252b42;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+/*технический класс*/
+._container {
+    max-width: 1046px;
+    margin: 0px auto;     /*выстроит контейнер по середине*/
+}
+/*--------------------балка*/
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.header__container {
+    display: flex;
+    min-height: 104px;
+    align-items: center;
+}
+.heafer__logo {
+    font-size: 24px;
+    font-we
+}
+.header__menu {
+    margin: 0px 0px 0px 133px;
+}
+
+.menu {
+}
+.menu__list {
+}
+.menu__item {
+}
+.menu__link {
+}

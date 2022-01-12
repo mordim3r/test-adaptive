@@ -39,38 +39,128 @@ body {
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+    display: flex;               /*чтобы прибить подвал к низу*/
+    flex-direction: column;      /*чтобы прибить подвал к низу*/
 }
 /*технический класс*/
 ._container {
     max-width: 1046px;
     margin: 0px auto;     /*выстроит контейнер по середине*/
+    padding: 0 15px;       /*добавляем отступы и меняем box-sizing чтоб не прилепало */
+    box-sizing: content-box;  /* к левой границе на малых экранах*/
 }
-/*--------------------балка*/
+._ibg{
+    position: relative;
+}
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+/*--------------------iшапка*/
 .header {
     position: absolute;
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 50;
+    z-index: 50; 
 }
 .header__container {
     display: flex;
     min-height: 104px;
     align-items: center;
 }
-.heafer__logo {
+@media (max-width: 479px){
+    .header__container{
+        min-height: 85px;
+    }
+}
+.header__logo {
     font-size: 24px;
-    font-we
+    font-weight: 700;
+    color: inherit;     /*чтоб наследовать темный синий*/
 }
 .header__menu {
     margin: 0px 0px 0px 133px;
+}
+@media (max-width: 992px){
+    .header__menu{
+        margin: 0 0 0 80px;
+    }
+}
+@media (max-width: 767px){
+    .header__menu{
+        margin: 0 0 0 40px;
+    }
+}
+@media (max-width: 479px){
+    .header__menu{
+        margin: 0 0 0 20px;
+    }
 }
 
 .menu {
 }
 .menu__list {
+     display: flex;   /*выстраиваем в ряд*/
+     flex-wrap: wrap;    /*переносить пункты меню в маленьком разрешении*/
 }
 .menu__item {
+    padding: 5px 0;
+    }
+.menu__item:not(:last-child){     /*у всех кроме последнего элемента*/
+    margin: 0 21px 0 0;
 }
 .menu__link {
+    color: #737373;
+    line-height: calc(24 / 14 * 100%); /*вычислили от основного шрифта*/
+    font-weight: 600;
+}
+@media (max-width: 479px){
+    .header__menu{
+        font-size: 18px;
+    }
+}
+/*PAGE---------------------------------------------------*/
+.page{
+    flex: 1 1 auto; /*чтобы прибить подвал*/
+}
+/*подвал---------------------------------------------------*/
+.footer{
+
+}
+
+/* MAIN BLOCk-----------------------------------------------------------*/
+
+
+.page__main-block {
+}
+.main-block {
+}
+.main-block__cintainer {
+}
+._container {
+}
+.main-block__body {
+}
+.main-block__title {
+}
+.main-block__text {
+}
+.main-block__buttons {
+}
+.main-block__button {
+}
+.main-block__button_border {
+}
+.main-block__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
 }
